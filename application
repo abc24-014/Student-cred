@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Apply for Loan</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h2>Student Loan Form</h2>
+  <form>
+    <label>Student ID: <input type="text" name="student_id"></label><br>
+    <label>Full Name: <input type="text" name="full_name"></label><br>
+    <label>Course: <input type="text" name="course"></label><br>
+    <label>Loan Amount: <input type="number" name="loan_amount" oninput="calculateInterest()"></label><br>
+    <p id="interest"></p>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
