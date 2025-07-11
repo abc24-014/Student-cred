@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h2>Admin Dashboard</h2>
+  <p>Loan Overview and Performance will appear here.</p>
+</body>
+</html>
