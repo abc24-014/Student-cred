@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BAC Loan Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to BAC Student Loans</h1>
+    <nav>
+      <a href="loan.html">Apply for Loan</a>
+      <a href="admin.html">Admin Login</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Loan Info</h2>
+      <p>We offer a 30% interest rate through FNB bank only.</p>
+    </section>
+  </main>
+</body>
+</html>
