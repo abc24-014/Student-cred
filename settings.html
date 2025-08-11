@@ -1,0 +1,31 @@
+<div class="settings-page">
+    <h1>Account Settings</h1>
+    
+    <div class="settings-tabs">
+        <button class="settings-tab active" data-tab="profile">Profile</button>
+        <button class="settings-tab" data-tab="security">Security</button>
+        <button class="settings-tab" data-tab="notifications">Notifications</button>
+        <button class="settings-tab" data-tab="payment">Payment Methods</button>
+    </div>
+    
+    <div class="settings-content">
+        <div class="settings-section profile-section">
+            <h2>Profile Information</h2>
+            <form id="profile-form">
+                <!-- Profile fields -->
+                <div class="form-group">
+                    <label>Account Type</label>
+                    <div class="account-type-display">
+                        <span class="account-badge borrower">Borrower</span>
+                        <span class="account-badge lender">Lender</span>
+                    </div>
+                    <p class="help-text">Contact support to change account type</p>
+                </div>
+                <!-- More fields -->
+                <button type="submit" class="btn-save">Save Changes</button>
+            </form>
+        </div>
+        
+        <!-- Other sections would be here -->
+    </div>
+</div>
