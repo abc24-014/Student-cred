@@ -3,29 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>StudentLoan Connect - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="login-page">
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+            <div class="logo">StudentLoan Connect</div>
+            <div class="nav-links">
+                <a href="register.html">Register</a>
+            </div>
         </nav>
     </header>
-    <main>
-        <h1>Login</h1>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
-            <button>Login</button>
-        </form>
+    
+    <main class="login-container">
+        <div class="login-card">
+            <h2>Welcome Back</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Student ID/Email</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">Login</button>
+            </form>
+            
+            <div class="login-links">
+                <a href="forgot-password.html">Forgot Password?</a>
+                <span>New here? <a href="register.html">Register</a></span>
+            </div>
+        </div>
     </main>
+    
+    <footer>
+        <p>&copy; 2023 StudentLoan Connect. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/main.js"></script>
 </body>
 </html>
