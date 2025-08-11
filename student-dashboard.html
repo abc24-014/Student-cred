@@ -1,6 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard
+<div class="dashboard">
+    <div class="sidebar">
+        <!-- Navigation menu -->
+    </div>
+    <div class="main-content">
+        <div class="welcome-banner">
+            <h1>Welcome back, <span id="username">Student</span>!</h1>
+            <p>Here's your financial overview</p>
+        </div>
+        
+        <div class="stats-grid">
+            <!-- Borrower Stats -->
+            <div class="stat-card borrower-card">
+                <h3>Your Loans</h3>
+                <div class="stat-value">P5,000</div>
+                <p>Total Borrowed</p>
+                <a href="loans.html" class="card-link">View Details</a>
+            </div>
+            
+            <!-- Lender Stats -->
+            <div class="stat-card lender-card">
+                <h3>Your Investments</h3>
+                <div class="stat-value">P12,000</div>
+                <p>Total Lent</p>
+                <a href="investments.html" class="card-link">View Details</a>
+            </div>
+            
+            <!-- Transaction Stats -->
+            <div class="stat-card transaction-card">
+                <h3>Recent Activity</h3>
+                <div class="stat-value">3</div>
+                <p>Pending Actions</p>
+                <a href="transactions.html" class="card-link">See All</a>
+            </div>
+        </div>
+        
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <h2>Quick Actions</h2>
+            <div class="action-buttons">
+                <button class="action-btn request-loan">Request Loan</button>
+                <button class="action-btn offer-loan">Offer Loan</button>
+                <button class="action-btn make-payment">Make Payment</button>
+            </div>
+        </div>
+    </div>
+</div>
