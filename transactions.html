@@ -1,0 +1,30 @@
+<div class="transactions-page">
+    <h1>Your Transactions</h1>
+    
+    <div class="transaction-filters">
+        <select id="transaction-type">
+            <option value="all">All Transactions</option>
+            <option value="loan">Loans</option>
+            <option value="repayment">Repayments</option>
+            <option value="investment">Investments</option>
+        </select>
+        <input type="date" id="transaction-date" placeholder="Filter by date">
+    </div>
+    
+    <div class="transaction-list">
+        <!-- Sample transaction -->
+        <div class="transaction-item repayment">
+            <div class="transaction-icon">R</div>
+            <div class="transaction-details">
+                <h3>Loan Repayment</h3>
+                <p>June 15, 2023</p>
+            </div>
+            <div class="transaction-amount">
+                <span class="amount">P1,200</span>
+                <span class="fee">Fee: P30</span>
+            </div>
+        </div>
+        
+        <!-- More transactions -->
+    </div>
+</div>
