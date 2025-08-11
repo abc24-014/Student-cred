@@ -3,36 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>StudentLoan Connect - Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Registration-specific styles */
+        .registration-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .account-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .account-option {
+            position: relative;
+        }
+        
+        .account-option input {
+            position: absolute;
+            opacity: 0;
+        }
+        
+        .option-card {
+            padding: 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .account-option input:checked + .option-card {
+            border-color: #4a6bff;
+            background-color: #f0f4ff;
+        }
+        
+        .option-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .btn-submit {
+            background: #4a6bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="about.html">About</a></li>
-            </ul>
+            <div class="logo">StudentLoan Connect</div>
+            <div class="nav-links">
+                <a href="login.html">Login</a>
+            </div>
         </nav>
     </header>
-    <main>
-        <h1>Register</h1>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
-            <label for="role">Role:</label>
-            <select id="role" name="role">
-                <option value="student">Student</option>
-                <option value="lender">Lender</option>
-            </select><br><br>
-            <button>Register</button>
+    
+    <main class="registration-container">
+        <h2>Create Your Account</h2>
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Student Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student-id" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Account Type</label>
+                <div class="account-types">
+                    <label class="account-option">
+                        <input type="radio" name="account-type" value="borrower" required>
+                        <div class="option-card">
+                            <h3>Borrower</h3>
+                            <p>I need a student loan</p>
+                        </div>
+                    </label>
+                    
+                    <label class="account-option">
+                        <input type="radio" name="account-type" value="lender" required>
+                        <div class="option-card">
+                            <h3>Lender</h3>
+                            <p>I want to lend to students</p>
+                        </div>
+                    </label>
+                    
+                    <label class="account-option">
+                        <input type="radio" name="account-type" value="both" required>
+                        <div class="option-card">
+                            <h3>Both</h3>
+                            <p>I want to borrow and lend</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="fnb-account">FNB Botswana Account Number</label>
+                <input type="text" id="fnb-account" name="fnb-account" required>
+                <small>This will be used for all transactions</small>
+            </div>
+            
+            <button type="submit" class="btn-submit">Complete Registration</button>
+            
+            <div class="login-link">
+                Already have an account? <a href="login.html">Login here</a>
+            </div>
         </form>
     </main>
+    
+    <footer>
+        <p>&copy; 2023 StudentLoan Connect. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Form validation would go here
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Process registration
+            alert('Registration submitted!');
+            // In real implementation, would send to server
+        });
+    </script>
 </body>
 </html>
