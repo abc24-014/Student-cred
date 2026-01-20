@@ -1,28 +1,85 @@
-<div class="marketplace">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentLoan Connect - Marketplace</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="marketplace-page">
+
+<header>
+    <nav>
+        <div class="logo">StudentLoan Connect</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="marketplace.html" class="active">Marketplace</a>
+            <a href="transactions.html">Transactions</a>
+            <a href="settings.html">Settings</a>
+        </div>
+    </nav>
+</header>
+
+<main class="marketplace">
     <div class="marketplace-header">
         <h1>Loan Marketplace</h1>
+        <p>Browse available loans or offer funding to other students</p>
+
         <div class="marketplace-tabs">
             <button class="tab active" data-tab="borrow">Find Loans</button>
             <button class="tab" data-tab="lend">Lend Money</button>
         </div>
     </div>
-    
+
     <div class="marketplace-content">
         <div class="loan-listings">
-            <!-- Sample loan listing -->
+
+            <!-- Loan Card -->
             <div class="loan-card">
                 <div class="loan-info">
                     <h3>Tuition Assistance</h3>
-                    <p>Amount: P8,000</p>
-                    <p>Interest: 5%</p>
-                    <p>Term: 12 months</p>
+                    <p><strong>Amount:</strong> P8,000</p>
+                    <p><strong>Interest:</strong> 5%</p>
+                    <p><strong>Term:</strong> 12 months</p>
                 </div>
                 <div class="loan-actions">
                     <button class="btn-request">Request This Loan</button>
                 </div>
             </div>
-            
-            <!-- More listings -->
+
+            <!-- Loan Card -->
+            <div class="loan-card">
+                <div class="loan-info">
+                    <h3>Books & Supplies</h3>
+                    <p><strong>Amount:</strong> P3,500</p>
+                    <p><strong>Interest:</strong> 4%</p>
+                    <p><strong>Term:</strong> 6 months</p>
+                </div>
+                <div class="loan-actions">
+                    <button class="btn-request">Request This Loan</button>
+                </div>
+            </div>
+
+            <!-- Loan Card -->
+            <div class="loan-card">
+                <div class="loan-info">
+                    <h3>Accommodation Support</h3>
+                    <p><strong>Amount:</strong> P6,000</p>
+                    <p><strong>Interest:</strong> 6%</p>
+                    <p><strong>Term:</strong> 10 months</p>
+                </div>
+                <div class="loan-actions">
+                    <button class="btn-request">Request This Loan</button>
+                </div>
+            </div>
+
         </div>
     </div>
-</div>
+</main>
+
+<footer>
+    <p>&copy; 2023 StudentLoan Connect. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
