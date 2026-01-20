@@ -1,6 +1,30 @@
-<div class="transactions-page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentLoan Connect - Transactions</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="transactions-page">
+
+<header>
+    <nav>
+        <div class="logo">StudentLoan Connect</div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="transactions.html" class="active">Transactions</a>
+            <a href="settings.html">Settings</a>
+        </div>
+    </nav>
+</header>
+
+<main class="transactions-container">
     <h1>Your Transactions</h1>
-    
+    <p class="page-subtitle">Track all your loans, repayments, and investments</p>
+
+    <!-- Filters -->
     <div class="transaction-filters">
         <select id="transaction-type">
             <option value="all">All Transactions</option>
@@ -8,23 +32,90 @@
             <option value="repayment">Repayments</option>
             <option value="investment">Investments</option>
         </select>
-        <input type="date" id="transaction-date" placeholder="Filter by date">
+
+        <input type="date" id="transaction-date">
+
+        <button class="btn-secondary">Apply Filters</button>
     </div>
-    
+
+    <!-- Summary -->
+    <div class="transaction-summary">
+        <div class="summary-card">
+            <h3>Total In</h3>
+            <p class="amount positive">P6,500</p>
+        </div>
+        <div class="summary-card">
+            <h3>Total Out</h3>
+            <p class="amount negative">P4,200</p>
+        </div>
+        <div class="summary-card">
+            <h3>Fees Paid</h3>
+            <p class="amount muted">P180</p>
+        </div>
+    </div>
+
+    <!-- Transaction List -->
     <div class="transaction-list">
-        <!-- Sample transaction -->
+
+        <!-- Repayment -->
         <div class="transaction-item repayment">
             <div class="transaction-icon">R</div>
+
             <div class="transaction-details">
                 <h3>Loan Repayment</h3>
                 <p>June 15, 2023</p>
+                <span class="status completed">Completed</span>
             </div>
+
             <div class="transaction-amount">
-                <span class="amount">P1,200</span>
+                <span class="amount negative">- P1,200</span>
                 <span class="fee">Fee: P30</span>
             </div>
         </div>
-        
-        <!-- More transactions -->
+
+        <!-- Loan Received -->
+        <div class="transaction-item loan">
+            <div class="transaction-icon">L</div>
+
+            <div class="transaction-details">
+                <h3>Loan Received</h3>
+                <p>June 2, 2023</p>
+                <span class="status completed">Completed</span>
+            </div>
+
+            <div class="transaction-amount">
+                <span class="amount positive">+ P5,000</span>
+            </div>
+        </div>
+
+        <!-- Investment -->
+        <div class="transaction-item investment">
+            <div class="transaction-icon">I</div>
+
+            <div class="transaction-details">
+                <h3>Investment Made</h3>
+                <p>May 20, 2023</p>
+                <span class="status pending">Pending</span>
+            </div>
+
+            <div class="transaction-amount">
+                <span class="amount negative">- P3,000</span>
+            </div>
+        </div>
+
     </div>
-</div>
+
+    <!-- Empty State (optional, for later JS use) -->
+    <!--
+    <div class="empty-state">
+        <p>No transactions found for the selected filters.</p>
+    </div>
+    -->
+</main>
+
+<footer>
+    <p>&copy; 2023 StudentLoan Connect. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
